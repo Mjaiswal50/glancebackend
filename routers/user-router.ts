@@ -14,6 +14,8 @@ class UserRouter {
         this.router.get('/login',UserController.login);
 		this.router.patch('/verify',auth,UserController.setVerified);
 		this.router.get('/fetch', auth, UserController.getUserDetails);
+		this.router.patch('/fpreset',UserController.fpReset);
+		this.router.patch('/fpset', UserController.fpSet);
 }
 }
 
